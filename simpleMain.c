@@ -1,27 +1,15 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include "bubble.h"
-#include "selection.h"
-#include "insertion.h"
-int main(int argc, char *argv[]){
+#include <stdio.h>
+int main(){
 
-  int i,N;
-  printf("There are %d arguments\n",argc);
-  for(i=0;i<argc;i++){
-         printf("argv %d: %s\n",i,argv[i]); 
-  }
+  int id ;
+  char name[50];
+  
+  printf("Your Id : ");
+  scanf("%d",&id);
 
-  N=argc-1;
+  printf("Your Name : ");
+  scanf("%s",name);
 
-  int *a;
-  a=(int*) malloc(sizeof(int)*N);
 
-  for(i=1;i<argc;i++){
-        a[i-1]=atoi(argv[i]);
-  }
-
-  //bubble(a,N);
- // selection(a,N);
- insertion(a,N);
   return 0;
 }
